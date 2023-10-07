@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\YouTubeController;
+use App\Http\Controllers\InstagramController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/youtube', [YouTubeController::class, 'index'])->name('youtube.index');
+Route::get('/fetch-instagram-posts', [InstagramController::class, 'fetchFeeds']);
